@@ -1,0 +1,38 @@
+<html>
+
+<head>
+	<title> Information détaillé sur {{contact.Nom}} </title>
+</head>
+
+<body>
+
+	<h1> {{contact.Nom}} {{contact.Prenom}} </h1>
+
+	<table>
+		<tr>
+			<td>Age </td> 
+			<td> {{contact.Age}} </td>
+		</tr>
+
+		<tr>
+			<td> Pays</td> 
+			<td> {{contact.lieu.Pays}} </td>
+		</tr>
+
+		<tr>
+			<td> Region </td> 
+			<td> {{contact.lieu.Region}} </td>
+		</tr>
+
+		<tr>
+			<td> Ville </td>
+			 <td> {{contact.lieu.Ville}} </td>
+		</tr>
+	</table>
+	
+<a href="/user/"> Retour </a>
+
+</body>
+
+
+</html>

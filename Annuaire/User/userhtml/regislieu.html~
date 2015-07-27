@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Enregistrer un lieu</title>
+</head>
+  <body>
+
+	<h1>
+		Enregistrez un nouveau lieu
+	</h1>
+	
+	<h2> Les lieux déjà enregistrés </h2>
+	{% for lieu in leslieux %}	
+		<p> {{lieu.Pays}}->{{lieu.Region}} ->{{lieu.Ville}} </p>
+	{% endfor  %}
+	
+
+<h2> Vous pouvez ajoutez un nouveau lieu Ici </h2>
+	<form action="/lieu/newlieu/" method="POST">{% csrf_token %}
+				
+		Pays	<input type="text" name="Pays" required> <br>
+		Region	<input type="text" name="Region" required> <br>
+		Ville	<input type="text" name="Ville" required> <br><br>
+				<button type="submit" value="valider">
+					Enregistrez
+				</button>
+	</form>	
+
+	<br> 
+		<a href="/user/"> Retour à la liste de contact</a>
+
+  </body>
+</html>

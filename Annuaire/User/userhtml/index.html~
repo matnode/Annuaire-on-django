@@ -1,0 +1,17 @@
+{% if My_contact_list  %}
+	<ul>
+	{% for mycontact in My_contact_list %}
+		<li> 
+			<a href="/user/{{mycontact.id}}/detail/">	
+				{{mycontact.Nom}} {{mycontact.Prenom}} 
+			</a>				
+		</li>
+		{% endfor  %}
+	</ul>
+{% else  %}
+	<p> Aucun utilisateur dans votre annuaire  </p>
+{% endif  %}
+<br>
+<a href="/user/newuser"> Ajouter un nouveau utilisateur </a> <br> <br>
+
+<a href="/lieu/newlieu"> Ajouter un nouveau lieu </a>

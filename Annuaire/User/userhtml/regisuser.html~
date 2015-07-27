@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>Enregistrer un utilisateur</title>
+</head>
+  <body>
+
+	<h1>
+		Enregistrez un nouveau utilisateur
+	</h1>
+	
+	
+
+	<form action="/user/newuser/" method="POST">{% csrf_token %}
+		
+		lieu disponible <select name="lieu">				
+					{% for lieu in leslieux %}	
+					  <option value="{{lieu.id}}">{{lieu.Ville}}</option>
+					{% endfor  %}				
+				</select><br>
+	
+		Votre nom	<input type="text" name="Nom" required> <br>
+		Votre prénom	<input type="text" name="Prenom" required> <br>
+		Votre Age	<input type="text" name="Age" required> <br><br>
+				<button type="submit" value="valider">
+					Enregistrez
+				</button>
+	</form>	
+
+	<br> 
+		<a href="/user/"> Retour à la liste de contact</a>
+
+  </body>
+</html>
